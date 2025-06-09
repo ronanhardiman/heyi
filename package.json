@@ -2,16 +2,11 @@
     "name": "heyi",
     "version": "1.0.0",
     "description": "一个简单的静态网站",
+    "private": true,
     "scripts": {
-        "dev": "npx serve",
+        "dev": "serve",
+        "start": "serve",
         "build": "echo '静态网站无需构建步骤'"
-    },
-    "engines": {
-        "node": ">=14.0.0"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/username/heyi.git"
     },
     "keywords": [
         "静态网站",

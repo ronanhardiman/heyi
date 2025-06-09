@@ -5,8 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Heyi静态网站</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="script.js"></script>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -15,32 +14,32 @@
             <h1>欢迎来到Heyi静态网站</h1>
             <p>一个简单的静态网页，可以部署在Vercel上</p>
             <nav>
-                <a href="index.html" class="active">首页</a>
-                <a href="about.html">关于我们</a>
+                <a href="/" class="active">首页</a>
+                <a href="/about">关于我们</a>
             </nav>
         </div>
     </header>
 
-    <div class="container">
+    <main class="container">
         <section>
             <h2>关于本站</h2>
-            <p>这是一个使用纯HTML、CSS构建的简单静态网站。它可以轻松部署到Vercel平台上。</p>
+            <p>这是一个使用纯HTML、CSS构建的简单静态网站，专为Vercel平台部署而设计。</p>
             <p>您可以根据需要自由修改这个网站，添加更多页面和功能。</p>
         </section>
 
-        <section class="minimal-gallery-section">
-            <h2>极简图片</h2>
-            <div class="minimal-gallery">
-                <div class="minimal-item">
+        <section class="gallery-section">
+            <h2>图片展示</h2>
+            <div class="gallery">
+                <div class="gallery-item">
                     <img src="images/1-apr30.png" alt="4月30日">
                 </div>
-                <div class="minimal-item">
+                <div class="gallery-item">
                     <img src="images/2-may.png" alt="5月">
                 </div>
-                <div class="minimal-item">
+                <div class="gallery-item">
                     <img src="images/3-may.png" alt="5月">
                 </div>
-                <div class="minimal-item">
+                <div class="gallery-item">
                     <img src="images/4-june9.png" alt="6月9日">
                 </div>
             </div>
@@ -50,30 +49,20 @@
             <h2>部署说明</h2>
             <p>要将此网站部署到Vercel，您可以：</p>
             <ol>
-                <li>在GitHub上创建一个仓库并上传这些文件</li>
-                <li>登录到Vercel并导入您的GitHub仓库</li>
-                <li>按照Vercel的指导完成部署过程</li>
+                <li>将项目推送到GitHub仓库</li>
+                <li>在Vercel平台上导入GitHub仓库</li>
                 <li>几分钟后，您的网站就上线了！</li>
             </ol>
         </section>
-
-        <section>
-            <h2>开始自定义</h2>
-            <p>这只是一个起点。您可以：</p>
-            <ul>
-                <li>修改CSS样式创建自己的设计</li>
-                <li>添加JavaScript为网站增加交互性</li>
-                <li>添加更多HTML页面扩展网站内容</li>
-                <li>使用图片和媒体丰富您的网站</li>
-            </ul>
-        </section>
-    </div>
+    </main>
 
     <footer>
         <div class="container">
             <p>&copy; 2023 Heyi静态网站. 保留所有权利。</p>
         </div>
     </footer>
+
+    <script src="js/main.js"></script>
 </body>
 
 </html>
