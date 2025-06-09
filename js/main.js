@@ -44,18 +44,72 @@ function setupImageZoom() {
     const modal = document.getElementById('imageModal');
     const modalImg = document.getElementById('modalImage');
     const captionText = document.getElementById('modalCaption');
+    const modalCounter = document.getElementById('modalCounter');
     const closeBtn = document.getElementsByClassName('modal-close')[0];
+    const prevBtn = document.querySelector('.prev-btn');
+    const nextBtn = document.querySelector('.next-btn');
+
+    // 获取所有可放大的图片
+    const zoomableImages = document.querySelectorAll('.zoomable');
+    const totalImages = zoomableImages.length;
+
+    // 当前显示的图片索引
+    let currentIndex = 0;
 
     // 为所有可放大的图片添加点击事件
-    const zoomableImages = document.querySelectorAll('.zoomable');
     zoomableImages.forEach(img => {
         img.onclick = function () {
             modal.style.display = "block";
-            modalImg.src = this.src;
-            captionText.innerHTML = this.alt;
+            currentIndex = parseInt(this.getAttribute('data-index'));
+            showImage(currentIndex);
 
             // 阻止滚动
             document.body.style.overflow = 'hidden';
+        }
+    });
+
+    // 显示指定索引的图片
+    function showImage(index) {
+        const img = zoomableImages[index];
+        modalImg.src = img.src;
+        captionText.innerHTML = img.alt;
+        modalCounter.innerHTML = `图片 ${index + 1} / ${totalImages}`;
+    }
+
+    // 显示上一张图片
+    function showPrevImage() {
+        currentIndex = (currentIndex - 1 + totalImages) % totalImages;
+        showImage(currentIndex);
+    }
+
+    // 显示下一张图片
+    function showNextImage() {
+        currentIndex = (currentIndex + 1) % totalImages;
+        showImage(currentIndex);
+    }
+
+    // 点击上一张按钮
+    prevBtn.onclick = function (event) {
+        event.stopPropagation();
+        showPrevImage();
+    }
+
+    // 点击下一张按钮
+    nextBtn.onclick = function (event) {
+        event.stopPropagation();
+        showNextImage();
+    }
+
+    // 键盘左右键控制
+    document.addEventListener('keydown', function (event) {
+        if (modal.style.display === "block") {
+            if (event.key === "ArrowLeft") {
+                showPrevImage();
+            } else if (event.key === "ArrowRight") {
+                showNextImage();
+            } else if (event.key === "Escape") {
+                closeModal();
+            }
         }
     });
 
@@ -68,13 +122,6 @@ function setupImageZoom() {
             closeModal();
         }
     }
-
-    // 按ESC键关闭模态框
-    document.addEventListener('keydown', function (event) {
-        if (event.key === "Escape" && modal.style.display === "block") {
-            closeModal();
-        }
-    });
 
     /**
      * 关闭模态框

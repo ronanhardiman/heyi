@@ -67,16 +67,20 @@
             <div class="gallery">
 
                 <div class="gallery-item">
-                    <img src="assets/images/1-apr30.png" alt="4月30日" class="zoomable">
+                    <div class="image-number">1</div>
+                    <img src="assets/images/1-apr30.png" alt="4月30日" class="zoomable" data-index="0">
                 </div>
                 <div class="gallery-item">
-                    <img src="assets/images/2-may.png" alt="5月" class="zoomable">
+                    <div class="image-number">2</div>
+                    <img src="assets/images/2-may.png" alt="5月" class="zoomable" data-index="1">
                 </div>
                 <div class="gallery-item">
-                    <img src="assets/images/3-may.png" alt="5月" class="zoomable">
+                    <div class="image-number">3</div>
+                    <img src="assets/images/3-may.png" alt="5月" class="zoomable" data-index="2">
                 </div>
                 <div class="gallery-item">
-                    <img src="assets/images/4-june9.png" alt="6月9日" class="zoomable">
+                    <div class="image-number">4</div>
+                    <img src="assets/images/4-june9.png" alt="6月9日" class="zoomable" data-index="3">
                 </div>
             </div>
         </section>
@@ -101,8 +105,13 @@
     <!-- 图片放大模态框 -->
     <div id="imageModal" class="modal">
         <span class="modal-close">&times;</span>
-        <img class="modal-content" id="modalImage">
-        <div id="modalCaption"></div>
+        <a class="prev-btn">&#10094;</a>
+        <div class="modal-content-wrapper">
+            <img class="modal-content" id="modalImage">
+            <div id="modalCaption"></div>
+            <div id="modalCounter"></div>
+        </div>
+        <a class="next-btn">&#10095;</a>
     </div>
 
     <script src="js/main.js"></script>

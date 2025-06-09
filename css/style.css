@@ -230,6 +230,7 @@ section h2 {
     border-radius: 8px;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
+    position: relative;
 }
 
 .gallery-item:hover {
@@ -240,6 +241,23 @@ section h2 {
     width: 100%;
     height: auto;
     display: block;
+}
+
+.image-number {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 14px;
+    z-index: 1;
 }
 
 .zoomable {
@@ -265,10 +283,18 @@ section h2 {
     overflow: auto;
 }
 
+.modal-content-wrapper {
+    position: relative;
+    margin: auto;
+    width: 80%;
+    max-width: 1000px;
+    text-align: center;
+}
+
 .modal-content {
     margin: auto;
     display: block;
-    max-width: 90%;
+    max-width: 100%;
     max-height: 80vh;
 }
 
@@ -281,6 +307,16 @@ section h2 {
     color: white;
     padding: 10px 0;
     height: 40px;
+    font-size: 18px;
+}
+
+#modalCounter {
+    color: white;
+    position: absolute;
+    bottom: -40px;
+    width: 100%;
+    text-align: center;
+    font-size: 16px;
 }
 
 .modal-content,
@@ -308,6 +344,37 @@ section h2 {
     font-weight: bold;
     transition: 0.3s;
     z-index: 1001;
+}
+
+.prev-btn,
+.next-btn {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 30px;
+    transition: 0.3s;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+.next-btn {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev-btn {
+    left: 0;
+}
+
+.prev-btn:hover,
+.next-btn:hover {
+    background-color: rgba(255, 255, 255, 0.2);
 }
 
 .modal-close:hover,
@@ -378,5 +445,11 @@ footer {
 
     .modal-content {
         width: 100%;
+    }
+
+    .prev-btn,
+    .next-btn {
+        padding: 10px;
+        font-size: 20px;
     }
 }
