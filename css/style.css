@@ -13,6 +13,9 @@
     --footer-bg: #f1f1f1;
     --header-bg: #2c3e50;
     --header-text: #fff;
+    --border-color: #e0e0e0;
+    --highlight-color: #e74c3c;
+    --link-color: #3498db;
 }
 
 * {
@@ -125,6 +128,95 @@ section h2 {
     margin-bottom: 1.5rem;
 }
 
+/* 求助内容样式 */
+.help-request {
+    padding: 2.5rem;
+}
+
+.help-request h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+}
+
+.letter {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 1.5rem;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+    border-left: 4px solid var(--primary-color);
+}
+
+.letter-header {
+    margin-bottom: 1.5rem;
+}
+
+.letter-greeting {
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: #444;
+}
+
+.letter-body {
+    padding: 0 0.5rem;
+}
+
+.letter-body p {
+    line-height: 1.7;
+    margin-bottom: 1.2rem;
+    font-size: 1.05rem;
+}
+
+.issue-details {
+    margin: 1.5rem 0;
+    padding: 1.2rem;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    border-left: 3px solid var(--highlight-color);
+}
+
+.issue-details p {
+    margin-bottom: 1rem;
+}
+
+.issue-details strong {
+    color: var(--highlight-color);
+    font-weight: 600;
+}
+
+.letter-footer {
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border-color);
+}
+
+.letter-footer p {
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+}
+
+.case-info,
+.user-info,
+.social-info {
+    display: flex;
+    align-items: center;
+}
+
+.case-info strong,
+.user-info strong,
+.social-info strong {
+    display: inline-block;
+    width: 80px;
+    color: #555;
+}
+
+.social-info a {
+    color: var(--link-color);
+    text-decoration: underline;
+}
+
 /* 图片展示 */
 .gallery {
     display: grid;
@@ -189,6 +281,14 @@ footer {
 
     section {
         padding: 1.5rem;
+    }
+
+    .help-request {
+        padding: 1.5rem;
+    }
+
+    .letter {
+        padding: 1rem;
     }
 
     .gallery {
