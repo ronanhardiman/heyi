@@ -179,3 +179,22 @@ nav a.active {
         gap: 15px;
     }
 }
+
+/* 404错误页面样式 */
+.error-section {
+    text-align: center;
+    padding: 50px 0;
+}
+
+.error-section h2 {
+    font-size: 120px;
+    margin: 0;
+    color: #e74c3c;
+    line-height: 1;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.error-section p {
+    font-size: 18px;
+    margin: 20px 0;
+}
