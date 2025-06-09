@@ -8,10 +8,10 @@
     --primary-color: #3498db;
     --secondary-color: #2980b9;
     --text-color: #333;
-    --bg-color: #f8f9fa;
-    --section-bg: #fff;
-    --footer-bg: #f1f1f1;
-    --header-bg: #2c3e50;
+    --bg-color: rgba(248, 249, 250, 0.95);
+    --section-bg: rgba(255, 255, 255, 0.95);
+    --footer-bg: rgba(241, 241, 241, 0.95);
+    --header-bg: rgba(44, 62, 80, 0.95);
     --header-text: #fff;
     --border-color: #e0e0e0;
     --highlight-color: #e74c3c;
@@ -29,6 +29,24 @@ body {
     line-height: 1.6;
     color: var(--text-color);
     background-color: var(--bg-color);
+    background-image: url('../assets/images/heyijie888.jpeg');
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+/* 在body内容之前添加一个半透明覆盖层，提高内容可读性 */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.8);
+    z-index: -1;
 }
 
 .container {
@@ -117,13 +135,16 @@ section {
     background-color: var(--section-bg);
     padding: 2rem;
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
     margin-bottom: 2rem;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 section h2 {
     color: var(--primary-color);
-    border-bottom: 2px solid #eee;
+    border-bottom: 2px solid rgba(238, 238, 238, 0.5);
     padding-bottom: 0.5rem;
     margin-bottom: 1.5rem;
 }
@@ -143,10 +164,12 @@ section h2 {
     max-width: 800px;
     margin: 0 auto;
     padding: 1.5rem;
-    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.9);
     border-radius: 10px;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
     border-left: 4px solid var(--primary-color);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
 }
 
 .letter-header {
@@ -279,8 +302,10 @@ section h2 {
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: rgba(0, 0, 0, 0.95);
     overflow: auto;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
 }
 
 .modal-content-wrapper {
@@ -401,7 +426,11 @@ footer {
     padding: 1.5rem 0;
     text-align: center;
     font-size: 0.9rem;
-    color: #666;
+    color: #555;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.05);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
 }
 
 /* 错误页面 */
