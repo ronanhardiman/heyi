@@ -13,7 +13,8 @@
 │   └── style.css      # 样式文件
 ├── js/
 │   └── main.js        # JavaScript文件
-├── images/            # 图片目录
+├── public/            # 静态资源目录
+│   └── images/        # 图片目录
 ├── vercel.json        # Vercel配置
 └── package.json       # 项目配置
 ```
@@ -66,6 +67,7 @@ npx serve
 - 编辑HTML文件修改内容
 - 修改`css/style.css`自定义样式
 - 在`js/main.js`中添加交互功能
+- 在`public/images/`中添加或更新图片
 
 ## 许可
 
