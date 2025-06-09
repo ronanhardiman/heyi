@@ -67,21 +67,21 @@
             <div class="gallery">
 
                 <div class="gallery-item">
-                    <img src="assets/images/1-apr30.png" alt="4月30日">
+                    <img src="assets/images/1-apr30.png" alt="4月30日" class="zoomable">
                 </div>
                 <div class="gallery-item">
-                    <img src="assets/images/2-may.png" alt="5月">
+                    <img src="assets/images/2-may.png" alt="5月" class="zoomable">
                 </div>
                 <div class="gallery-item">
-                    <img src="assets/images/3-may.png" alt="5月">
+                    <img src="assets/images/3-may.png" alt="5月" class="zoomable">
                 </div>
                 <div class="gallery-item">
-                    <img src="assets/images/4-june9.png" alt="6月9日">
+                    <img src="assets/images/4-june9.png" alt="6月9日" class="zoomable">
                 </div>
             </div>
         </section>
 
-        <section>
+        <!-- <section>
             <h2>部署说明</h2>
             <p>要将此网站部署到Vercel，您可以：</p>
             <ol>
@@ -89,7 +89,7 @@
                 <li>在Vercel平台上导入GitHub仓库</li>
                 <li>几分钟后，您的网站就上线了！</li>
             </ol>
-        </section>
+        </section> -->
     </main>
 
     <footer>
@@ -97,6 +97,13 @@
             <p>&copy; 2025 Heyi姐静态网站. 保留所有权利。</p>
         </div>
     </footer>
+
+    <!-- 图片放大模态框 -->
+    <div id="imageModal" class="modal">
+        <span class="modal-close">&times;</span>
+        <img class="modal-content" id="modalImage">
+        <div id="modalCaption"></div>
+    </div>
 
     <script src="js/main.js"></script>
 </body>
