@@ -46,6 +46,25 @@ footer {
     color: #666;
 }
 
+/* 图片样式 */
+.image-container {
+    margin: 2rem 0;
+    text-align: center;
+}
+
+.featured-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.image-caption {
+    margin-top: 1rem;
+    font-style: italic;
+    color: #666;
+}
+
 /* 导航样式 */
 nav {
     margin-top: 1.5rem;
