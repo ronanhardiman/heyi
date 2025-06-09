@@ -3,9 +3,10 @@
     "public": true,
     "cleanUrls": true,
     "trailingSlash": false,
+    "outputDirectory": ".",
     "headers": [
         {
-            "source": "/public/**/*",
+            "source": "/assets/images/(.*)",
             "headers": [
                 {
                     "key": "Cache-Control",
