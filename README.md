@@ -1,11 +1,11 @@
-# Vercel静态网站模板
+# Heyi静态网站
 
-这是一个简单的静态网站模板，专为Vercel平台部署而设计。项目使用纯HTML、CSS和JavaScript构建，无需任何构建工具或框架，便于快速开发和部署。
+这是一个简单的静态网站，专为Vercel平台部署而设计。项目使用纯HTML、CSS和JavaScript构建，无需任何构建工具或框架，便于快速开发和部署。
 
 ## 项目结构
 
 ```
-vercel-static-site/
+heyi/
 ├── index.html        # 主页面
 ├── about.html        # 关于页面
 ├── styles.css        # 样式表
